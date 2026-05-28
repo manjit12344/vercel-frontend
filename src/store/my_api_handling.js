@@ -102,10 +102,13 @@ export const addToCart = create((set, get) => ({
   loading: false,
   error: null,
 
-  getCart: async () => {
+  getCart: async (token) => {
     set({ loading: true });
     try {
       const response = await axios.get(`${base_url}/cartItems`, {
+        headers:{
+         Authorization:`bearer ${token}`
+        },
         withCredentials: true
       });
       console.log("Response", response);

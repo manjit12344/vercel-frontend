@@ -1,12 +1,17 @@
 import React, { useEffect } from 'react'
 import CartCard from "../components/cart.jsx";
 import { addToCart } from '../store/my_api_handling';
-
+import {useAuth} from "@clerk/clerk-react"
 const Carts = () => {
+  const {getToken} = useAuth();
   const { cart, loading, getCart,removeCart, error } = addToCart();
 
   useEffect(() => {
-    getCart();
+    async function see(){
+      const token = await getToken();
+      getCart(token);
+    }
+    see();
   }, []);
    console.log("Cart",cart);
   if (loading) return <p>Loading...</p>;
