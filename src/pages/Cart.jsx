@@ -28,7 +28,7 @@ const Carts = () => {
           className="col-6 p-1 col-md-4 mb-4 d-flex justify-content-center"
         >
           <div style={{ maxWidth: "350px", width: "100%" }}>
-            <CartCard product={p} removeCart = {removeCart} getCart = {getCart}/>
+            <CartCard product={p} removeCart = {removeCart}/>
           </div>
         </div>
       ))}

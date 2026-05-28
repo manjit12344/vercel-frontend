@@ -9,7 +9,6 @@ const CartCard = (props) => {
   async function Remove(){
     const token = await getToken();
     await props.removeCart(props.product.product_id,token);
-    props.getCart()
   }
   return (
     <Link to="/order-item">
