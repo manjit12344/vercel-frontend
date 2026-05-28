@@ -1,17 +1,3 @@
-// PlaceOrder.jsx
-// Route: /product/:id
-//
-// This is the main page. It:
-//  1. Fetches product details by :id from the URL
-//  2. Fetches saved addresses (needs auth token)
-//  3. Lets user pick size, quantity, address, payment method
-//  4. Places the order and shows a success screen
-//
-// Sub-components used:
-//   AddressSection  – address list + add/edit/delete forms
-//   PaymentSection  – COD vs online picker
-//   OrderSummary    – price breakdown card
-
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAuth } from "@clerk/clerk-react";
@@ -23,7 +9,7 @@ import AddressSection from "../components/PlaceOrders/AddressSection";
 import PaymentSection from "../components/PlaceOrders/PaymentSection";
 import OrderSummary, { calcTotal } from "../components/PlaceOrders/OrderSummary";
 
-const BASE_URL = "https://vercel-backend-tau-sooty.vercel.app";
+const BASE_URL = "http://localhost:3000";
 
 // ─── Success Screen ────────────────────────────────────────────────────────
 function SuccessScreen({ product, orderId, onGoHome }) {
@@ -43,7 +29,7 @@ function SuccessScreen({ product, orderId, onGoHome }) {
           fontSize: 36,
         }}
       >
-        ✅
+        
       </div>
 
       <style>{`
