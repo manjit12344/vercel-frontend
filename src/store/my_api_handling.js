@@ -135,6 +135,10 @@ export const addToCart = create((set, get) => ({
           }
         });
         console.log(response);
+        set(state =>({
+          cart:[response.data.data,...state.cart],
+          error:null
+        }))
         toast.success("product added to cart successfully");
         return true;
       }
@@ -162,7 +166,10 @@ export const addToCart = create((set, get) => ({
           }
         });
         console.log(response);
-
+        set(state =>({
+          cart:state.cart.filter(item => item.id !==id),
+          error:null
+        }))
         toast.success("product removed from cart successfully");
         return true;
       }
