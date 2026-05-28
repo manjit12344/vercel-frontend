@@ -167,7 +167,7 @@ export const addToCart = create((set, get) => ({
         });
         console.log(response);
         set(state =>({
-          cart:state.cart.filter(item => item.id !==id),
+          cart: state.cart.filter(item => item.product_id !== id),
           error:null
         }))
         toast.success("product removed from cart successfully");
