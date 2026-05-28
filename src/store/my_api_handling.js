@@ -109,7 +109,6 @@ export const addToCart = create((set, get) => ({
         headers:{
          Authorization:`Bearer ${token}`
         },
-        withCredentials: true
       });
       console.log("Response", response);
       set({ cart: response.data.data, error: null });
