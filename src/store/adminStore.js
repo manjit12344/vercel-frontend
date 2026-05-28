@@ -2,7 +2,8 @@ import { create } from "zustand";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 
-const base_url = "https://vercel-backend-tau-sooty.vercel.app/";
+
+const base_url = "http://localhost:3000";
 
 export const getLoggedinUser = create((set) => ({
   users: null,

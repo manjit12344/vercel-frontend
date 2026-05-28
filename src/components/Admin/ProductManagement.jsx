@@ -120,7 +120,7 @@ export default function ProductManagement() {
                   />
                 </div>
 
-                <div className="modal-body">
+               <div className="modal-body" style={{ maxHeight: "65vh", overflowY: "auto" }}>
                   <form id="product-form" onSubmit={handleSave}>
 
                     <div className="mb-3">
