@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 
 
-const base_url = "https://vercel-backend-tau-sooty.vercel.app/categor";
+const base_url = "https://vercel-backend-tau-sooty.vercel.app";
 
 //CategoryHandling 
 export const useCategoryStore = create((set, get) => ({
