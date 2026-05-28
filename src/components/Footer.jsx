@@ -48,7 +48,7 @@ const Footer = () => {
               <a href="#" className="btn btn-outline-light btn-sm">
                 <i class="fa-brands fa-instagram"></i>
               </a>
-              <a href="https://github.com/terabhaiseedhemaut/My_project_Partial" className="btn btn-outline-light btn-sm">
+              <a href="https://github.com/manjit12344" className="btn btn-outline-light btn-sm">
                 <i className="fa-brands fa-github"></i>
               </a>
               <a href="#" className="btn btn-outline-light btn-sm">
