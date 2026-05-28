@@ -23,7 +23,7 @@ import AddressSection from "../components/PlaceOrders/AddressSection";
 import PaymentSection from "../components/PlaceOrders/PaymentSection";
 import OrderSummary, { calcTotal } from "../components/PlaceOrders/OrderSummary";
 
-const BASE_URL = "https://vercel-backend-tau-sooty.vercel.app/";
+const BASE_URL = "https://vercel-backend-tau-sooty.vercel.app";
 
 // ─── Success Screen ────────────────────────────────────────────────────────
 function SuccessScreen({ product, orderId, onGoHome }) {
